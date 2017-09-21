@@ -13,6 +13,12 @@
 		D0E218371F7364AA00237376 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E218351F7364AA00237376 /* Main.storyboard */; };
 		D0E218421F7364AA00237376 /* Document_SearcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E218411F7364AA00237376 /* Document_SearcherTests.swift */; };
 		D0E2184D1F7364AA00237376 /* Document_SearcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E2184C1F7364AA00237376 /* Document_SearcherUITests.swift */; };
+		D0E2185F1F7364DF00237376 /* CPPTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0E2185B1F7364DF00237376 /* CPPTester.cpp */; };
+		D0E218601F7364DF00237376 /* CPPTesterWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0E2185E1F7364DF00237376 /* CPPTesterWrapper.mm */; };
+		D0E218651F736A4C00237376 /* CppTest2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0E218631F736A4C00237376 /* CppTest2.cpp */; };
+		D0E218691F736DBE00237376 /* CppWrap2.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0E218681F736DBE00237376 /* CppWrap2.mm */; };
+		D0E2186C1F73731200237376 /* TxtReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0E2186A1F73731200237376 /* TxtReader.cpp */; };
+		D0E218731F7375AC00237376 /* TxtReaderWrap.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0E218721F7375AC00237376 /* TxtReaderWrap.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,19 @@
 		D0E218481F7364AA00237376 /* Document SearcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Document SearcherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E2184C1F7364AA00237376 /* Document_SearcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document_SearcherUITests.swift; sourceTree = "<group>"; };
 		D0E2184E1F7364AA00237376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E2185A1F7364DF00237376 /* Document Searcher Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Document Searcher Bridging-Header.h"; sourceTree = "<group>"; };
+		D0E2185B1F7364DF00237376 /* CPPTester.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPPTester.cpp; sourceTree = "<group>"; };
+		D0E2185C1F7364DF00237376 /* CPPTester.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CPPTester.hpp; sourceTree = "<group>"; };
+		D0E2185D1F7364DF00237376 /* CPPTesterWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPTesterWrapper.h; sourceTree = "<group>"; };
+		D0E2185E1F7364DF00237376 /* CPPTesterWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CPPTesterWrapper.mm; sourceTree = "<group>"; };
+		D0E218631F736A4C00237376 /* CppTest2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CppTest2.cpp; sourceTree = "<group>"; };
+		D0E218641F736A4C00237376 /* CppTest2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CppTest2.hpp; sourceTree = "<group>"; };
+		D0E218671F736DBE00237376 /* CppWrap2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CppWrap2.h; sourceTree = "<group>"; };
+		D0E218681F736DBE00237376 /* CppWrap2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CppWrap2.mm; sourceTree = "<group>"; };
+		D0E2186A1F73731200237376 /* TxtReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TxtReader.cpp; sourceTree = "<group>"; };
+		D0E2186B1F73731200237376 /* TxtReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TxtReader.hpp; sourceTree = "<group>"; };
+		D0E218711F7375AC00237376 /* TxtReaderWrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TxtReaderWrap.h; sourceTree = "<group>"; };
+		D0E218721F7375AC00237376 /* TxtReaderWrap.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TxtReaderWrap.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0B14C821F739C3C00262A2F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D0E218661F736A5400237376 /* CppTest2-Concatenate */,
+				D0E218611F73666D00237376 /* CPPTester-PrintHelloWorld */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		D0B14C831F74372E00262A2F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0E218381F7364AA00237376 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D0E218231F7364AA00237376 = {
 			isa = PBXGroup;
 			children = (
@@ -95,11 +131,14 @@
 		D0E2182E1F7364AA00237376 /* Document Searcher */ = {
 			isa = PBXGroup;
 			children = (
+				D0E2185A1F7364DF00237376 /* Document Searcher Bridging-Header.h */,
+				D0B14C821F739C3C00262A2F /* Tests */,
 				D0E2182F1F7364AA00237376 /* AppDelegate.swift */,
 				D0E218311F7364AA00237376 /* ViewController.swift */,
 				D0E218331F7364AA00237376 /* Assets.xcassets */,
 				D0E218351F7364AA00237376 /* Main.storyboard */,
-				D0E218381F7364AA00237376 /* Info.plist */,
+				D0E2186D1F73750E00237376 /* TxtReader */,
+				D0B14C831F74372E00262A2F /* Supporting Files */,
 			);
 			path = "Document Searcher";
 			sourceTree = "<group>";
@@ -120,6 +159,39 @@
 				D0E2184E1F7364AA00237376 /* Info.plist */,
 			);
 			path = "Document SearcherUITests";
+			sourceTree = "<group>";
+		};
+		D0E218611F73666D00237376 /* CPPTester-PrintHelloWorld */ = {
+			isa = PBXGroup;
+			children = (
+				D0E2185B1F7364DF00237376 /* CPPTester.cpp */,
+				D0E2185C1F7364DF00237376 /* CPPTester.hpp */,
+				D0E2185D1F7364DF00237376 /* CPPTesterWrapper.h */,
+				D0E2185E1F7364DF00237376 /* CPPTesterWrapper.mm */,
+			);
+			name = "CPPTester-PrintHelloWorld";
+			sourceTree = "<group>";
+		};
+		D0E218661F736A5400237376 /* CppTest2-Concatenate */ = {
+			isa = PBXGroup;
+			children = (
+				D0E218631F736A4C00237376 /* CppTest2.cpp */,
+				D0E218641F736A4C00237376 /* CppTest2.hpp */,
+				D0E218671F736DBE00237376 /* CppWrap2.h */,
+				D0E218681F736DBE00237376 /* CppWrap2.mm */,
+			);
+			name = "CppTest2-Concatenate";
+			sourceTree = "<group>";
+		};
+		D0E2186D1F73750E00237376 /* TxtReader */ = {
+			isa = PBXGroup;
+			children = (
+				D0E2186A1F73731200237376 /* TxtReader.cpp */,
+				D0E2186B1F73731200237376 /* TxtReader.hpp */,
+				D0E218711F7375AC00237376 /* TxtReaderWrap.h */,
+				D0E218721F7375AC00237376 /* TxtReaderWrap.mm */,
+			);
+			name = TxtReader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +263,7 @@
 					D0E2182B1F7364AA00237376 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = VK9224648M;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					D0E2183C1F7364AA00237376 = {
@@ -260,6 +333,12 @@
 			files = (
 				D0E218321F7364AA00237376 /* ViewController.swift in Sources */,
 				D0E218301F7364AA00237376 /* AppDelegate.swift in Sources */,
+				D0E2186C1F73731200237376 /* TxtReader.cpp in Sources */,
+				D0E218691F736DBE00237376 /* CppWrap2.mm in Sources */,
+				D0E218601F7364DF00237376 /* CPPTesterWrapper.mm in Sources */,
+				D0E218651F736A4C00237376 /* CppTest2.cpp in Sources */,
+				D0E2185F1F7364DF00237376 /* CPPTester.cpp in Sources */,
+				D0E218731F7375AC00237376 /* TxtReaderWrap.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,12 +481,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VK9224648M;
 				INFOPLIST_FILE = "Document Searcher/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Justin.Document-Searcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/justin/Xcode Projects/Document Searcher/Document Searcher/Document Searcher Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -416,12 +498,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VK9224648M;
 				INFOPLIST_FILE = "Document Searcher/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Justin.Document-Searcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/justin/Xcode Projects/Document Searcher/Document Searcher/Document Searcher Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -507,6 +591,7 @@
 				D0E218531F7364AA00237376 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0E218541F7364AA00237376 /* Build configuration list for PBXNativeTarget "Document SearcherTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +600,7 @@
 				D0E218561F7364AA00237376 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0E218571F7364AA00237376 /* Build configuration list for PBXNativeTarget "Document SearcherUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +609,7 @@
 				D0E218591F7364AA00237376 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

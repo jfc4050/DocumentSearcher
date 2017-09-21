@@ -10,9 +10,14 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    //MARK: IBOutlets
+    @IBOutlet weak var filePathField: NSTextField!
+    @IBOutlet weak var keywordField: NSTextField!
+    @IBOutlet weak var keywordFieldTest: NSTextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -22,6 +27,14 @@ class ViewController: NSViewController {
         }
     }
 
+    //MARK: IBActions
+    @IBAction func searchButtonClicked(_ sender: NSButton) {
+        let filePath = filePathField.stringValue
+        let keyword = keywordField.stringValue
+        keywordFieldTest.intValue = TxtReaderWrap().readAndCount_wrapped(filePath, second: keyword)
+        
+    }
+    
 
 }
 

@@ -97,7 +97,7 @@
 				D0E218661F736A5400237376 /* CppTest2-Concatenate */,
 				D0E218611F73666D00237376 /* CPPTester-PrintHelloWorld */,
 			);
-			name = Tests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		D0B14C831F74372E00262A2F /* Supporting Files */ = {
@@ -169,7 +169,7 @@
 				D0E2185D1F7364DF00237376 /* CPPTesterWrapper.h */,
 				D0E2185E1F7364DF00237376 /* CPPTesterWrapper.mm */,
 			);
-			name = "CPPTester-PrintHelloWorld";
+			path = "CPPTester-PrintHelloWorld";
 			sourceTree = "<group>";
 		};
 		D0E218661F736A5400237376 /* CppTest2-Concatenate */ = {
@@ -180,7 +180,7 @@
 				D0E218671F736DBE00237376 /* CppWrap2.h */,
 				D0E218681F736DBE00237376 /* CppWrap2.mm */,
 			);
-			name = "CppTest2-Concatenate";
+			path = "CppTest2-Concatenate";
 			sourceTree = "<group>";
 		};
 		D0E2186D1F73750E00237376 /* TxtReader */ = {
@@ -191,7 +191,7 @@
 				D0E218711F7375AC00237376 /* TxtReaderWrap.h */,
 				D0E218721F7375AC00237376 /* TxtReaderWrap.mm */,
 			);
-			name = TxtReader;
+			path = TxtReader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

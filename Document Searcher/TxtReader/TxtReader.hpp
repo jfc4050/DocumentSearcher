@@ -19,8 +19,11 @@
 
 class TxtReader {
 public:
-    std::ifstream inFile;                               //Declare ifstream Object inFile
-    int readAndCount(const std::string& filePath,       //Search input file @ provided filePath for query
+    std::ifstream inFile;
+    std::string wordInQuery;
+    std::vector<std::string> wordsInQuery;//Declare ifstream Object inFile
+    
+    int readAndCount(const std::string& filePath,
                      const std::string& query);
 };
 

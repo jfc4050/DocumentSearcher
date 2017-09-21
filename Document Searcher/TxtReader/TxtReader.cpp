@@ -26,29 +26,28 @@
 //}
 
 
-int TxtReader::readAndCount(const std::string& filePath,
-                            const std::string& query) {
+int TxtReader::readAndCount(const std::string& filePath, const std::string& query) {
+    //Generate Vector of words in query
     std::stringstream sStr(query);
-    std::string word;
-    std::vector<std::string> words;
-    //Generate vector of individual words
-    while (sStr >> word) {
-        words.push_back(word);
-    }
+    std::string wordInQuery;
+    std::vector<std::string> wordsInQuery;
     
-    inFile.open(filePath);                    //associate fstream variable (inFile) with input source (@filePath)
+    while (sStr >> wordInQuery)
+        wordsInQuery.push_back(wordInQuery);
+    
+    inFile.open(filePath);
     int count = 0;
     std::string currentWord;
     while (inFile >> currentWord) {
         bool match = false;
         int i = 0;
-        if (currentWord == words[0]) {
+        if (currentWord == wordsInQuery[0]) {
             match = true;
             i++;
         }
-        while (match and i < words.size()) {
+        while (match and i < wordsInQuery.size()) {
             inFile >> currentWord;
-            if (currentWord != words[i]) {
+            if (currentWord != wordsInQuery[i]) {
                 match = false;
                 break;
             }
@@ -58,5 +57,6 @@ int TxtReader::readAndCount(const std::string& filePath,
     
     }
     inFile.close();
+    
     return count;
 }

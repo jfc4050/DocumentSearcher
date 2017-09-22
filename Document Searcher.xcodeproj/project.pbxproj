@@ -131,14 +131,14 @@
 		D0E2182E1F7364AA00237376 /* Document Searcher */ = {
 			isa = PBXGroup;
 			children = (
-				D0E2185A1F7364DF00237376 /* Document Searcher Bridging-Header.h */,
-				D0B14C821F739C3C00262A2F /* Tests */,
 				D0E2182F1F7364AA00237376 /* AppDelegate.swift */,
 				D0E218311F7364AA00237376 /* ViewController.swift */,
-				D0E218331F7364AA00237376 /* Assets.xcassets */,
 				D0E218351F7364AA00237376 /* Main.storyboard */,
+				D0E2185A1F7364DF00237376 /* Document Searcher Bridging-Header.h */,
 				D0E2186D1F73750E00237376 /* TxtReader */,
 				D0B14C831F74372E00262A2F /* Supporting Files */,
+				D0B14C821F739C3C00262A2F /* Tests */,
+				D0E218331F7364AA00237376 /* Assets.xcassets */,
 			);
 			path = "Document Searcher";
 			sourceTree = "<group>";

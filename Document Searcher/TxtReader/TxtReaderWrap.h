@@ -11,6 +11,9 @@
 @interface TxtReaderWrap : NSObject
 
 -(int)readAndCount_wrapped:(NSString*)filePath
-                          second:(NSString*)query;
+                    second:(NSString*)query;
+
+-(int)rabinKarp_wrapped:(NSString*)filePath
+                 second:(NSString*)query;
 
 @end

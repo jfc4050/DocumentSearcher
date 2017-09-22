@@ -23,7 +23,12 @@ public:
     std::string wordInQuery;
     std::vector<std::string> wordsInQuery;//Declare ifstream Object inFile
     
-    int readAndCount(const std::string& filePath,
+    int readAndCountNaive(const std::string& filePath,
                      const std::string& query);
+    
+    int rabinFingerprint(const std::string& inputStr, const int base);
+    
+    int readAndCountRK(const std::string& filePath,
+                                  const std::string& query);
 };
 

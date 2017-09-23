@@ -7,7 +7,8 @@
 //
 
 #import "TxtReaderWrap.h"
-#include "TxtReader.hpp"
+#import "TxtReader.hpp"
+
 
 @implementation TxtReaderWrap
 

@@ -10,6 +10,8 @@
 
 @interface TxtReaderWrap : NSObject
 
+-(id)init;
+-(void)dealloc;
 
 -(int)readAndCount_wrapped:(NSString*)filePath
                     second:(NSString*)query;

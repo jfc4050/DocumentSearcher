@@ -35,11 +35,9 @@ public:
     int readAndCountRK(const std::string& filePath,
                        const std::string& query);
     
-    int levenshteinDistance(const std::string& str,
-                            const std::string& target);
-    
-    std::map<std::string, int> levenshteinEachWord(const std::string& filePath,
-                                                   const std::string& query);
+    int levenshteinDistance(const std::string& str, const std::string& target, bool testing);
 
+    
+    std::map<std::string, int> levenshteinEachWord(const std::string& filePath, const std::string& query, bool testing);
 };
 

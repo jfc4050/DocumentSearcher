@@ -89,7 +89,7 @@ int TxtReader::readAndCountRK(const std::string& filePath, const std::string& qu
 }
 
 // LEVENSHTEIN STRING COMPARISON
-int levenshteinDistance(const std::string& str, const std::string& target, bool testing=true)
+int TxtReader::levenshteinDistance(const std::string& str, const std::string& target, bool testing=true)
 {
     int rows = (int) str.size() + 1;        //set array dimensions and declare
     int cols = (int) target.size() + 1;
@@ -118,7 +118,7 @@ int levenshteinDistance(const std::string& str, const std::string& target, bool 
 }
 
 // Levenshtein Comparison with each word
-std::map<std::string, int> levenshteinEachWord(const std::string& filePath, const std::string& query, bool testing=false)
+std::map<std::string, int> TxtReader::levenshteinEachWord(const std::string& filePath, const std::string& query, bool testing=false)
 {
     if (testing) {
         std::cout << query << std::endl;

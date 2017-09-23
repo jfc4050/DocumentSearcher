@@ -19,4 +19,7 @@
 -(int)rabinKarp_wrapped:(NSString*)filePath
                  second:(NSString*)query;
 
+-(NSMutableDictionary*)levenshteinEachWord_wrapped:(NSString*)filePath
+                                            second:(NSString*)query;
+
 @end

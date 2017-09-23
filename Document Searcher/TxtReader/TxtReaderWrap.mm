@@ -14,8 +14,8 @@
 }
 
 -(std::string)convertStrToStd:(NSString*)NSInput;
--(NSMutableDictionary*)levenshteinEachWord:(NSString*)filePath
-                                    second:(NSString*)query;
+-(NSMutableDictionary*)levenshteinEachWord_wrapped:(NSString*)filePath
+                                            second:(NSString*)query;
 
 @end
 
@@ -56,15 +56,15 @@
     return count;
 }
 
--(NSMutableDictionary*)levenshteinEachWord:(NSString*)filePath
-                                    second:(NSString*)query {
+-(NSMutableDictionary*)levenshteinEachWord_wrapped:(NSString*)filePath
+                                            second:(NSString*)query {
     
     std::string stdPath = std::string([filePath UTF8String]);
     std::string stdQuery = std::string([query UTF8String]);
     
     NSMutableDictionary* NSMap;
     
-    for (auto entry : txt->levenshteinEachWord(stdPath, stdQuery, false)) {
+    for (auto& entry : txt->levenshteinEachWord(stdPath, stdQuery, false)) {
         std::string stdKey = entry.first;
         int stdVal = entry.second;
         NSString* NSKey = [NSString stringWithUTF8String:stdKey.c_str()];

@@ -14,18 +14,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var filePathField: NSTextField!
     @IBOutlet weak var keywordField: NSTextField!
     @IBOutlet weak var keywordFieldTest: NSTextField!
+    @IBOutlet weak var tableView: NSTableView!
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
 
     //MARK: IBActions
     @IBAction func searchButtonClicked(_ sender: NSButton) {
@@ -33,9 +23,6 @@ class ViewController: NSViewController {
         let keyword = keywordField.stringValue
         keywordFieldTest.intValue = TxtReaderWrap().readAndCount_wrapped(filePath, second: keyword)
 //        keywordFieldTest.intValue = TxtReaderWrap().rabinKarp_wrapped(filePath, second: keyword)
-        
+
     }
-    
-
 }
-

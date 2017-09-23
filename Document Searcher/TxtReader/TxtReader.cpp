@@ -26,7 +26,8 @@
 //}
 
 // NAIVE ALGORITHM
-int TxtReader::readAndCountNaive(const std::string& filePath, const std::string& query) {
+int TxtReader::readAndCountNaive(const std::string& filePath, const std::string& query)
+{
     
     //Generate Vector of words in query
     std::stringstream sStr(query);
@@ -62,7 +63,8 @@ int TxtReader::readAndCountNaive(const std::string& filePath, const std::string&
 
 
 // Rabin Fingerprint Generator
-int TxtReader::rabinFingerprint(const std::string& inputStr, const int base=101) {
+int TxtReader::rabinFingerprint(const std::string& inputStr, const int base=101)
+{
     int hash = 0;
     int i = 0;
     for (char currChar : inputStr) {
@@ -74,7 +76,8 @@ int TxtReader::rabinFingerprint(const std::string& inputStr, const int base=101)
 
 
 // RABIN-KARP ALGORITHM
-int TxtReader::readAndCountRK(const std::string& filePath, const std::string& query) {
+int TxtReader::readAndCountRK(const std::string& filePath, const std::string& query)
+{
     
     // Generate vector of characters in file
     inFile.open(filePath);
@@ -96,6 +99,35 @@ int TxtReader::readAndCountRK(const std::string& filePath, const std::string& qu
         }
     }
     return count;
+}
+
+// LEVENSHTEIN STRING COMPARISON
+int levenshteinDistance(const std::string& str, const std::string& target, bool testing=true)
+{
+    int rows = (int) str.size() + 1;        //set array dimensions and declare
+    int cols = (int) target.size() + 1;
+    int dist[rows][cols];
+    
+    // populate string comparisons with empty string
+    for (int i = 0 ; i < rows ; ++i)
+        dist[i][0] = i;
+    for (int j = 0 ; j < cols ; ++j)
+        dist[0][j] = j;
+    
+    for (int row = 1 ; row < rows ; ++row) {
+        for (int col = 1 ; col < cols ; ++col) {
+            int cost;
+            (str[row-1] == target[col-1]) ? cost = 0 : cost = 1;    // determine if operation is necessary
+                
+            dist[row][col] = std::min( { dist[row-1][col] + 1,           // deletion
+                                         dist[row][col-1] + 1,           // insertion
+                                         dist[row-1][col-1] + cost } );   // substitution
+            
+            if (testing)
+                assert(dist[row][col] <= rows and dist[row][col] <= cols);
+        }
+    }
+    return dist[rows-1][cols-1];        //levenshtein distance is contents of lower right member
 }
 
 

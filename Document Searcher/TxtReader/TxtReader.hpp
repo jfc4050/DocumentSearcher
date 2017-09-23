@@ -16,6 +16,7 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <cassert>
 
 class TxtReader {
 public:
@@ -30,5 +31,7 @@ public:
     
     int readAndCountRK(const std::string& filePath,
                                   const std::string& query);
+    
+    int levenshteinDistance(const std::string& str, const std::string& target);
 };
 

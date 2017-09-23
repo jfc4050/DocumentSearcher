@@ -17,6 +17,8 @@
 #include <sstream>
 #include <vector>
 #include <cassert>
+#include <map>
+#include <iostream>
 
 class TxtReader {
 public:
@@ -25,13 +27,19 @@ public:
     std::vector<std::string> wordsInQuery;//Declare ifstream Object inFile
     
     int readAndCountNaive(const std::string& filePath,
-                     const std::string& query);
+                          const std::string& query);
     
-    int rabinFingerprint(const std::string& inputStr, const int base);
+    int rabinFingerprint(const std::string& inputStr,
+                         const int base);
     
     int readAndCountRK(const std::string& filePath,
-                                  const std::string& query);
+                       const std::string& query);
     
-    int levenshteinDistance(const std::string& str, const std::string& target);
+    int levenshteinDistance(const std::string& str,
+                            const std::string& target);
+    
+    std::map<std::string, int> levenshteinEachWord(const std::string& filePath,
+                                                   const std::string& query);
+
 };
 

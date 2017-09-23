@@ -11,19 +11,6 @@
 
 #include "TxtReader.hpp"
 
-//int TxtReader::readAndCount(const std::string& filePath,
-//                            const std::string& query) {
-//    inFile.open(filePath);                    //associate fstream variable (inFile) with input source (@filePath)
-//    int count = 0;
-//    std::string currentWord;
-//    while (inFile >> currentWord) {
-//        if (currentWord == query) {
-//            count++;
-//        }
-//    }
-//    inFile.close();
-//    return count;
-//}
 
 // NAIVE ALGORITHM
 int TxtReader::readAndCountNaive(const std::string& filePath, const std::string& query)
@@ -130,5 +117,35 @@ int levenshteinDistance(const std::string& str, const std::string& target, bool 
     return dist[rows-1][cols-1];        //levenshtein distance is contents of lower right member
 }
 
+// Levenshtein Comparison with each word
+std::map<std::string, int> levenshteinEachWord(const std::string& filePath, const std::string& query, bool testing=false)
+{
+    if (testing) {
+        std::cout << query << std::endl;
 
-
+    }
+            
+    std::ifstream inFile;
+    inFile.open(filePath);
+    std::string curWord;
+    std::map<std::string, int> comparisons;
+    
+    int dist;
+    while(inFile >> curWord) {
+        dist = levenshteinDistance(curWord, query);
+        
+        if (testing) {
+            std::cout << "Current Comparison: " << curWord << "/" << query << " - " << "Distance: " << dist << std::endl;
+            std::cout << "Count in Dictionary: " << comparisons.count(curWord) << std::endl
+            << "\n";
+        }
+        
+        if (comparisons.count(curWord) == 0) {
+            comparisons[curWord] = dist;
+        }
+    }
+    inFile.close();
+    
+    //returns map of key value pairs (each word, distance)
+    return comparisons;
+}

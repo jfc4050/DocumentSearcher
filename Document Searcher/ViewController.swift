@@ -31,7 +31,7 @@ class ViewController: NSViewController {
     @IBAction func searchButtonClicked(_ sender: NSButton) {
         let filePath = filePathField.stringValue
         let keyword = keywordField.stringValue
-//        keywordFieldTest.intValue = TxtReaderWrap().readAndCount_wrapped(filePath, second: keyword)
+        keywordFieldTest.intValue = TxtReaderWrap().readAndCount_wrapped(filePath, second: keyword)
         keywordFieldTest.intValue = TxtReaderWrap().rabinKarp_wrapped(filePath, second: keyword)
         
     }
